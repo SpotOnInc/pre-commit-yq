@@ -1,0 +1,7 @@
+- id: yq_yaml_prettier
+  name: Alphabetize YAML arrays
+  description: |
+    Use the full power of YQ to do what you want, by default - alphabetize YAML arrays
+  entry: hooks/yq_yaml_prettier.sh
+  language: script
+  files: \.ya?ml$
