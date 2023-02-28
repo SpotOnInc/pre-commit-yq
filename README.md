@@ -16,6 +16,7 @@ That pre-commit-hook was designed, firstly as auto-alphabetize YAML list hooks, 
 * [Authors](#authors)
 * [License](#license)
 
+Want to contribute? Check [open issues](https://github.com/SpotOnInc/pre-commit-yq/issues?q=-label%3A%22auto-update%22+is%3Aopen+sort%3Aupdated-desc) and [contributing notes](/.github/CONTRIBUTING.md).
 
 ## How to install
 
