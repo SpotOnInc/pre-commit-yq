@@ -35,7 +35,7 @@ Want to contribute? Check [open issues](https://github.com/SpotOnInc/pre-commit-
   <sub><sup>Hope that it all will work.
   </sup></sub></sup></sub></sup></sub></sup></sub></sup></sub></sup></sub></sup></sub></sup></sub></sup></sub><br><br>
 * `bash` 4 or higher
-* `patch` 2.5.8 or higher <sub><sup>2.7.6+ preferred</sup></sub>
+* `patch` 2.5.8 or higher, 2.7.6+ preferred
 * [`yq`](https://github.com/kislyuk/yq#installation) OR [`docker`](https://docs.docker.com/get-docker/) <sub><sup>or both</sup></sub>
 
     If both are installed, hook prefers locally installed `yq`.
@@ -66,7 +66,7 @@ sudo apt install -y yq
 We highly recommend using [WSL/WSL2](https://docs.microsoft.com/en-us/windows/wsl/install) with Ubuntu and following the Ubuntu installation guide.
 
 > Note: We won't be able to help with issues that can't be reproduced in Linux/Mac.
-> So, try to find a working solution and send PR before open an issue.
+> Please try to find a working solution and send a PR before opening an issue.
 
 Otherwise, you can follow [this gist](https://gist.github.com/etiennejeanneaurevolve/1ed387dc73c5d4cb53ab313049587d09):
 
@@ -121,8 +121,8 @@ In example, YAML representation of:
 
 ```yaml
 components:
-    terraform:
-        okta-groups-teleport:
+  terraform:
+    okta-groups-teleport:
 ```
 In `yq PATH` is `.components.terraform.okta-groups-teleport`.
 
@@ -152,8 +152,8 @@ If you'd to like specify only one `yq PATH` which should be alphabetized in the 
 - name: Alphabetize YAML arrays
   id: yq_yaml_prettier
   args:
-  - -s okta/teleport.yaml=^.components.terraform|name$
-  - -s another/file.yml=.foo.bar
+    - -s okta/teleport.yaml=^.components.terraform|name$
+    - -s another/file.yml=.foo.bar
 ```
 
 

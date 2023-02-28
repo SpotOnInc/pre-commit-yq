@@ -2,7 +2,7 @@
 
 * [Run and debug hooks locally](#run-and-debug-hooks-locally)
 * [Add new hook](#add-new-hook)
-  * [Before write code](#before-write-code)
+  * [Before writing code](#before-writing-code)
   * [Prepare basic documentation](#prepare-basic-documentation)
   * [Add code](#add-code)
   * [Finish with the documentation](#finish-with-the-documentation)
@@ -33,7 +33,7 @@ For example, to test that the [`terraform_fmt`](../README.md#terraform_fmt) hook
 
 ## Add new hook
 
-### Before write code
+### Before writing code
 
 1. Try to figure out future hook usage.
 2. Confirm the concept with SpotOn OSS team.
@@ -64,4 +64,4 @@ For example, to test that the [`terraform_fmt`](../README.md#terraform_fmt) hook
 
 ### Finish with the documentation
 
-Create and populate a new hook section in [README](../README.md) which will includes hook description and usae examples.
+Create and populate a new hook section in [README](../README.md) which will include the hook description and usage examples.
