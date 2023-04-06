@@ -50,6 +50,10 @@ function check_is_deps_installed {
       exit 1
     fi
 
+    # Prevent "Docker pull logs" added to fixed file.
+    # https://github.com/SpotOnInc/pre-commit-yq/issues/9
+    docker pull mikefarah/yq:4 > /dev/null
+
     function yq {
       docker run --rm -i -v "${PWD}":/workdir mikefarah/yq:4 "$@"
     }
