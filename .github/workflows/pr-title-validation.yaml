@@ -15,6 +15,7 @@ jobs:
       # Please look up the latest version from
       # https://github.com/amannn/action-semantic-pull-request/releases
       - uses: amannn/action-semantic-pull-request@b6bca70dcd3e56e896605356ce09b76f7e1e0d39 # v5.1.0
+        id: lint_pr_title
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -53,3 +54,36 @@ jobs:
           # merge commit, and it's easy to commit this by mistake. Enable this option
           # to also validate the commit message for one commit PRs.
           validateSingleCommit: false
+
+      - uses: marocchino/sticky-pull-request-comment@v2
+        # When the previous steps fails, the workflow would stop. By adding this
+        # condition you can continue the execution with the populated error message.
+        if: always() && (steps.lint_pr_title.outputs.error_message != null)
+        with:
+          header: pr-title-lint-error
+          message: |
+            Hey there and thank you for opening this pull request! 👋🏼
+
+            We require pull request titles to follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/) and it looks like your proposed title needs to be adjusted.
+
+            Cheatsheet:
+
+            ```
+            feat(api): add GET /users route.
+            ^    ^    ^
+            |    |    |__ Subject
+            |    |_______ Scope (Optional)
+            |____________ Type
+            ```
+            Details:
+
+            ```
+            ${{ steps.lint_pr_title.outputs.error_message }}
+            ```
+
+      # Delete a previous comment when the issue has been resolved
+      - if: ${{ steps.lint_pr_title.outputs.error_message == null }}
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-title-lint-error
+          delete: true
