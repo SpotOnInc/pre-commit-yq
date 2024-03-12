@@ -3,20 +3,19 @@
 repos:
   - repo: local
     hooks:
-    - id: yq_yaml_prettier
-      name: Alphabetize YAML arrays
-      description: |
-        Use the full power of YQ to do what you want, by default - alphabetize YAML arrays
-        For more info check - scripts/pre-commit-hooks/hooks/README.md
-      language: script
-      entry: hooks/yq_yaml_prettier.sh
-      files: \.ya?ml$
-      exclude: |
-        (?x)
-          # Try to sort consecutive steps
-          (^.github/workflows
-        )
-
+      - id: yq_yaml_prettier
+        name: Alphabetize YAML arrays
+        description: |
+          Use the full power of YQ to do what you want, by default - alphabetize YAML arrays
+          For more info check - scripts/pre-commit-hooks/hooks/README.md
+        language: script
+        entry: hooks/yq_yaml_prettier.sh
+        files: \.ya?ml$
+        exclude: |
+          (?x)
+            # Try to sort consecutive steps
+            (^.github/workflows
+          )
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
@@ -68,14 +67,12 @@ repos:
     rev: v0.0.17
     hooks:
       - id: shfmt
-        args: ["-l", "-i", "2", "-ci", "-sr", "-w"]
-
+        args: ["-ci", "-i", "-l", "-sr", "-w", "2"]
       - id: shellcheck
         name: "shellcheck: check regular scripts"
         args:
-          - --source-path=SCRIPTDIR
           - --external-sources
-
+          - --source-path=SCRIPTDIR
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v3.0.2
     hooks:
