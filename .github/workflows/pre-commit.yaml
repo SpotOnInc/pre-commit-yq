@@ -25,7 +25,7 @@ jobs:
         sudo apt update && sudo apt install shellcheck
 
 
-    - uses: actions/setup-python@d27e3f3d7c64b4bbf8e4abfb9b63b83e846e0435 # v4.5.0
+    - uses: actions/setup-python@b64ffcaf5b410884ad320a9cfac8866006a109aa # v4.8.0
       with:
         python-version: '3.9'
     # Need to success pre-commit fix push
