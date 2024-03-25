@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.2](https://github.com/SpotOnInc/pre-commit-yq/compare/v0.1.1...v0.1.2) (2024-03-25)
+
+
+### Reverts
+
+* Revert "chore(deps): update jossef/action-latest-release-info action to v1.2.2" (#34) ([830faf7](https://github.com/SpotOnInc/pre-commit-yq/commit/830faf796ea33f61179f61360fdc63e402dfb245)), closes [#34](https://github.com/SpotOnInc/pre-commit-yq/issues/34)
+
 ## [0.1.1](https://github.com/SpotOnInc/pre-commit-yq/compare/v0.1.0...v0.1.1) (2023-04-06)
 
 
