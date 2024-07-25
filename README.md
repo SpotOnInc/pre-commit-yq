@@ -1,3 +1,7 @@
+# ARCHIVE INFORMATION
+> [!IMPORTANT]
+> Due to lack of usage and maintenance, this repository has been archived.  
+> Please read the [repository archival FAQ](https://docs.corp.spoton.sh/developer/undocumented-repositories-archival-faq/) for more information!
 # YAML/XML/TOML Prettier based on `yq`
 
 [`yq`](https://github.com/kislyuk/yq) is Command-line YAML, XML, TOML processor - `jq` wrapper for YAML/XML/TOML documents.
