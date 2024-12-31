@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.3](https://github.com/SpotOnInc/pre-commit-yq/compare/v0.1.2...v0.1.3) (2024-12-31)
+
+
+### Bug Fixes
+
+* Hook failed to work with achors in arrays ([#36](https://github.com/SpotOnInc/pre-commit-yq/issues/36)) ([0351533](https://github.com/SpotOnInc/pre-commit-yq/commit/0351533d16ddf6ad69355ff6dc80d7910991a008))
+
 ## [0.1.2](https://github.com/SpotOnInc/pre-commit-yq/compare/v0.1.1...v0.1.2) (2024-03-25)
 
 
