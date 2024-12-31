@@ -1,0 +1,16 @@
+_commit: v1.2.3
+_src_path: https://github.com/SpotOnInc/copier-catalog-info
+description: "Make able to apply `yq` as pre-commit.com hook. YAML prettier. "
+domain: domain:default/infrastructure
+generate_techdocs: false
+lifecycle: production
+links: []
+owner: group:default/cloud-and-traffic
+repo_url: SpotOnInc/pre-commit-yq
+subdomain: domain:default/cloud-and-traffic
+tags:
+  - title: language
+    value: bash
+  - title: tool
+    value: yq
+template_type: library
