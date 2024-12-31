@@ -4,7 +4,7 @@ kind: Component
 metadata:
   name: pre-commit-yq
   description: |
-    Make able to apply `yq` as pre-commit.com hook. YAML prettier. 
+    Make able to apply `yq` as pre-commit.com hook. YAML prettier.
   annotations:
     spoton.com/domain: domain:default/infrastructure
     spoton.com/subdomain: domain:default/cloud-and-traffic
