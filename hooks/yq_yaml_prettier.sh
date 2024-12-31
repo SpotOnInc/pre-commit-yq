@@ -115,7 +115,7 @@ function per_file_hook_unique_part {
   elif
     [ -z "${SORT_REGEXPS["${filename}"]}" ]
   then
-    yq_output=$(yq e '( ... |select(type == "!!seq")) |= sort_by( select(tag == "!!str") //  (keys | .[0]) )' "$filename" 2>&1)
+    yq_output=$(yq e '(.. | select(tag == "!!seq")) |= sort_by(select(tag == "!!str") // .)' "$filename" 2>&1)
     exit_code=$?
     error_type="on whole file"
   else
