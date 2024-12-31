@@ -1,0 +1,19 @@
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pre-commit-yq
+  description: |
+    Make able to apply `yq` as pre-commit.com hook. YAML prettier.
+  annotations:
+    spoton.com/domain: domain:default/infrastructure
+    spoton.com/subdomain: domain:default/cloud-and-traffic
+    github.com/project-slug: spotoninc/pre-commit-yq
+  tags:
+    - bash # language
+    - yq # tool
+
+spec:
+  type: library
+  owner: group:default/cloud-and-traffic
+  lifecycle: production
