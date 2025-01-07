@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: spotoninc/github-action-validate-catalog-info@v1
+      - uses: spotoninc/github-action-validate-catalog-info@1c00ecc37be2b8797466087bbb08528a101f1505 # v1
